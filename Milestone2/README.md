@@ -355,19 +355,45 @@ FreightQuote_AI/
 
 # 📸 Screenshots
 
-The following screenshots demonstrate the successful implementation of all required Milestone 2 functionalities.
+## Home Page
 
-| Feature | Screenshot |
-|----------|------------|
-| Home Page | `screenshots/Home_Page.png` |
-| AI Copilot (Prompt & Response) | `screenshots/AI_Copilot_Prompt_Response.png` |
-| ML Pricing Calculator | `screenshots/ML_Pricing_Calculator.png` |
-| Admin ML Model Card | `screenshots/Admin_ML_Model_Card.png` |
-| Admin User Management | `screenshots/Admin_User_Management.png` |
-| Account Lockout | `screenshots/Account_Lockout.png` |
-| OTP Cooldown | `screenshots/OTP_Cooldown.png` |
+![Home Page](screenshots/Home_Page.png)
 
 ---
+
+## AI Copilot (Prompt & Response)
+
+![AI Copilot](screenshots/AI_Copilot_Prompt_Response.png)
+
+---
+
+## ML Pricing Calculator
+
+![ML Pricing Calculator](screenshots/ML_Pricing_Calculator.png)
+
+---
+
+## Admin ML Model Card
+
+![Admin ML Model Card](screenshots/Admin_ML_Model_Card.png)
+
+---
+
+## Admin User Management
+
+![Admin User Management](screenshots/Admin_User_Management.png)
+
+---
+
+## Account Lockout
+
+![Account Lockout](screenshots/Account_Lockout.png)
+
+---
+
+## OTP Cooldown
+
+![OTP Cooldown](screenshots/OTP_Cooldown.png)
 
 ## 👨‍💻 Developed For
 
