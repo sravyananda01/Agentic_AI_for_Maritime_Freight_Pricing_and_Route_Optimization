@@ -1,12 +1,27 @@
-[README.md](https://github.com/user-attachments/files/30661662/README.md)
-
-# 🚢 FreightQuote AI – Enterprise AI-Powered Maritime Brokerage Platform
+# Agentic AI for Maritime Freight Pricing and Route Optimization
 
 > **Infosys Springboard Internship Project – Milestone 3**
 
 ---
 
-# 📖 Project Overview
+## 🏷️ Badges
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-FF4B4B?logo=streamlit&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F79A3E?logo=scikit-learn&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Transformers-FFD21E?logo=huggingface&logoColor=black)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?logo=langchain&logoColor=white)
+![FAISS](https://img.shields.io/badge/FAISS-Vector%20Store-0467DF)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--learn-orange)
+![AI](https://img.shields.io/badge/AI-Qwen%202.5-brightgreen)
+![RAG](https://img.shields.io/badge/RAG-Retrieval--Augmented%20Generation-purple)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white)
+![License](https://img.shields.io/badge/License-Educational-green)
+
+---
+
+## 📖 Project Overview
 
 FreightQuote AI is an AI-powered enterprise maritime brokerage platform developed as part of the Infosys Springboard Internship Program. The platform is designed to simplify and automate freight quotation generation, shipment analysis, carrier evaluation, and logistics decision-making using Artificial Intelligence, Machine Learning, and Retrieval-Augmented Generation (RAG).
 
@@ -16,498 +31,205 @@ Milestone 3 focuses on integrating the work completed in Milestone 1 and Milesto
 
 ---
 
-# 🎯 Project Objectives
+## 📑 Table of Contents
 
-The primary objectives of the project are:
+- [Project Banner](#-freightquote-ai--enterprise-ai-powered-maritime-brokerage-platform)
+- [GitHub Badges](#%EF%B8%8F-badges)
+- [Project Overview](#-project-overview)
+- [Project Objectives](#-project-objectives)
+- [Problem Statement](#-problem-statement)
+- [Proposed Solution](#-proposed-solution)
+- [Key Features](#-key-features)
+- [Technology Stack](#-technology-stack)
+- [System Architecture](#-system-architecture)
+- [Project Workflow](#-project-workflow)
+- [Repository Structure](#-repository-structure)
+- [Milestone Overview](#-milestone-overview)
+- [Milestone 1](#-milestone-1--secure-authentication-module)
+- [Milestone 2](#-milestone-2--multi-agent-ai-platform)
+- [Milestone 3](#-milestone-3--project-integration--rag-pipeline)
+- [Artificial Intelligence](#-artificial-intelligence)
+- [Machine Learning](#-machine-learning)
+- [Retrieval-Augmented Generation (RAG)](#-retrieval-augmented-generation-rag)
+- [Security Features](#-security-features)
+- [Datasets Used](#-datasets-used)
+- [Documentation Used](#-documentation-used)
+- [Performance Metrics](#-performance-metrics)
+- [Testing Strategy](#-testing-strategy)
+- [Installation Guide](#-installation-guide)
+- [Deployment](#-deployment)
+- [User Guide](#-user-guide)
+- [Application Screenshots](#-application-screenshots)
+- [Future Enhancements](#-future-enhancements)
+- [GitHub Collaboration Workflow](#-github-collaboration-workflow)
+- [Repository Guidelines](#-repository-guidelines)
+- [Project Highlights](#-project-highlights)
+- [Contributors](#-contributors)
+- [References](#-references)
+- [Contact](#-contact)
+- [Support](#-support)
+- [License](#-license)
+
+---
+
+## 🎯 Project Objectives
+
+The primary objectives of FreightQuote AI are:
 
 - Develop an enterprise-grade AI-powered freight quotation system.
-- Automate freight pricing using Machine Learning.
-- Assist logistics managers through an AI-powered Copilot.
-- Analyze shipping routes and weather conditions.
-- Evaluate carrier performance and compliance.
+- Automate freight pricing using Machine Learning algorithms.
+- Assist logistics managers through an intelligent AI-powered Copilot.
+- Analyze shipping routes and dynamic weather conditions.
+- Evaluate carrier performance, reliability, and compliance.
 - Build a Retrieval-Augmented Generation (RAG) pipeline for document-based question answering.
-- Integrate all milestones into a single modular application.
-- Maintain collaborative software development using GitHub.
-
----
-# 🌍 Problem Statement
-
-The maritime logistics industry faces several challenges in generating freight quotations due to dynamic pricing, varying carrier performance, changing weather conditions, and the large volume of logistics documents. Manual quotation generation is time-consuming, error-prone, and inefficient.
-
-FreightQuote AI addresses these challenges by leveraging Artificial Intelligence, Machine Learning, and Retrieval-Augmented Generation (RAG) to automate freight quotation generation, provide intelligent logistics recommendations, and retrieve relevant information from logistics documents.
+- Integrate all project milestones into a single modular application.
+- Maintain collaborative software development practices using GitHub.
 
 ---
 
-# 💡 Proposed Solution
+## 🌍 Problem Statement
 
-FreightQuote AI provides an enterprise-level solution that combines secure authentication, AI-powered freight prediction, carrier evaluation, weather analysis, intelligent document retrieval, and an AI Copilot into a single platform.
+The maritime logistics industry faces several challenges in generating freight quotations due to dynamic pricing, varying carrier performance, changing weather conditions, and the large volume of unstructured logistics documents. Manual quotation generation is time-consuming, error-prone, and inefficient.
 
-The platform enables logistics managers to make informed decisions by utilizing machine learning models for prediction and RAG-powered document retrieval for context-aware responses.
-
----
-
-# ⭐ Key Features
-
-- Secure User Authentication
-- AI Copilot powered by Qwen 2.5 LLM
-- Freight Price Prediction
-- Route & Weather Analysis
-- Carrier Performance Audit
-- Analytics Dashboard
-- Model Retraining
-- Admin Dashboard
-- Retrieval-Augmented Generation (RAG)
-- PDF Knowledge Base
-- Semantic Search
-- Intelligent Question Answering
+FreightQuote AI addresses these challenges by leveraging Artificial Intelligence, Machine Learning, and Retrieval-Augmented Generation (RAG) to automate freight quotation generation, provide intelligent logistics recommendations, and retrieve relevant information from logistics documents accurately.
 
 ---
 
-# 🏗 System Architecture
+## 💡 Proposed Solution
 
-The application follows a modular enterprise architecture.
+FreightQuote AI provides an enterprise-level solution that combines secure authentication, AI-powered freight prediction, carrier evaluation, weather analysis, intelligent document retrieval, and an AI Copilot into a single unified platform.
 
-User
-↓
-
-Authentication Module
-
-↓
-
-AI Copilot
-
-↓
-
-Machine Learning Agents
-
-↓
-
-Analytics Dashboard
-
-↓
-
-RAG Pipeline
-
-↓
-
-Knowledge Base
-
-↓
-
-SQLite Database
+The platform enables logistics managers to make data-driven decisions by utilizing trained machine learning models for pricing predictions and a RAG-powered document retrieval engine for context-aware, grounded responses.
 
 ---
 
-# 🔄 Project Workflow
+## ⭐ Key Features
 
-1. User logs into the application.
-2. Authentication verifies user credentials.
-3. User accesses AI modules.
-4. Machine Learning predicts freight pricing.
-5. Route & Weather module analyzes shipment conditions.
-6. Carrier Audit evaluates carrier performance.
-7. RAG pipeline retrieves relevant information from logistics documents.
-8. AI Copilot generates context-aware responses.
-9. Analytics Dashboard displays business insights.
-10. Admin manages users and monitors system activities.
-
----
-
-# 📊 Datasets Used
-
-The project utilizes multiple logistics datasets including:
-
-- Freight Pricing Dataset
-- Carrier Performance Dataset
-- Port Information Dataset
-- Weather Dataset
-- Shipment Dataset
-- Logistics Documents (PDF)
-- Maritime Reports
-
-These datasets are used for model training, prediction, analytics, and document retrieval.
+- **Secure User Authentication**: Complete access control with password hashing, email OTP verification, and JWT session tokens.
+- **AI Copilot**: Logistics assistant powered by the Qwen 2.5 Large Language Model.
+- **Freight Price Prediction**: Automated pricing engine using trained machine learning models.
+- **Route & Weather Analysis**: Risk assessment and weather monitoring for shipping lanes.
+- **Carrier Performance Audit**: Evaluation of carrier compliance, speed, and cost efficiency.
+- **Analytics Dashboard**: Aggregated operational insights, KPIs, and performance charts.
+- **Model Retraining Engine**: Capabilities to retrain predictive models on new logistics datasets.
+- **Admin Dashboard**: Comprehensive user management, role assignments, and system auditing.
+- **Retrieval-Augmented Generation (RAG)**: Document QA pipeline powered by FAISS and LangChain.
+- **PDF Knowledge Base**: Centralized repository of maritime guidelines, policies, and manuals.
+- **Semantic Search**: Fast vector similarity search over dense document embeddings.
+- **Intelligent Question Answering**: Grounded responses combining LLMs and retrieved document context.
 
 ---
 
-# 📚 Documentation Used
+## 🛠 Technology Stack
 
-The RAG knowledge base contains documents such as:
-
-- Freight Policies
-- Maritime Guidelines
-- Shipping Regulations
-- Port Operations Manuals
-- Carrier Documentation
-- Logistics Reports
-- Business Process Documents
-- PDF Reference Materials
-
----
-
-# 🔐 Security Features
-
-The platform implements multiple security mechanisms including:
-
-- JWT Authentication
-- Password Hashing
-- Email OTP Verification
-- Security Questions
-- Role-Based Authentication
-- Admin Controls
-- Secure Session Management
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend** | Streamlit |
+| **Backend** | Python |
+| **Database** | SQLite |
+| **Machine Learning** | Scikit-learn, Pandas, NumPy |
+| **Artificial Intelligence** | Hugging Face Transformers, Qwen 2.5 LLM |
+| **Retrieval-Augmented Generation (RAG)** | LangChain, FAISS, Sentence Transformers |
+| **Deployment** | Google Colab, Ngrok |
+| **Version Control** | Git, GitHub |
 
 ---
 
-# 📈 Performance Metrics
+## 🏗 System Architecture
 
-Machine learning models are evaluated using:
+```mermaid
+flowchart TD
+    subgraph ClientLayer ["Client Layer"]
+        A[User]
+    end
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- RMSE
-- R² Score
+    subgraph AuthLayer ["Authentication & Access"]
+        B[Authentication Module]
+        C[Dashboard]
+    end
 
-The best-performing model is selected as the Champion Model for deployment.
+    subgraph CoreAILayer ["AI & Intelligence Engine"]
+        D[AI Copilot]
+        E[Machine Learning Models]
+    end
 
----
+    subgraph ServiceModules ["Logistics Services"]
+        F[Freight Prediction]
+        G[Route & Weather]
+        H[Carrier Audit]
+        I[Analytics Dashboard]
+    end
 
-# 🔄 Development Workflow
+    subgraph RAGLayer ["RAG Knowledge Engine"]
+        J[RAG Pipeline]
+        K[Knowledge Base]
+        L[FAISS Vector Store]
+        M[LLM Response Engine]
+    end
 
-The project follows Agile software development practices.
+    subgraph DataStorage ["Persistence Layer"]
+        N[(SQLite Database)]
+    end
 
-Workflow:
-
-Requirement Analysis
-
-↓
-
-System Design
-
-↓
-
-Module Development
-
-↓
-
-Testing
-
-↓
-
-Integration
-
-↓
-
-Deployment
-
-↓
-
-Documentation
-
----
-
-# 📋 Testing
-
-Testing performed during development includes:
-
-- Unit Testing
-- Integration Testing
-- Functional Testing
-- User Acceptance Testing
-- AI Response Validation
-- Machine Learning Model Evaluation
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+    J --> K
+    K --> L
+    L --> M
+    M --> N
+```
 
 ---
 
-# 📦 Repository Structure
+## 🔄 Project Workflow
 
-Repository Organization
-
-Milestone1
-
-Authentication
-
-↓
-
-Milestone2
-
-Multi-Agent AI Platform
-
-↓
-
-Milestone3
-
-RAG Pipeline
-
-↓
-
-Knowledge Base
-
-↓
-
-Project Documentation
-
-↓
-
-Final Integrated Application
+1. **User Authentication**: User logs into the platform via credential validation or email OTP verification.
+2. **Access Control**: Authentication module validates credentials and issues a secure user session.
+3. **Module Selection**: User navigates the unified dashboard to select specific operational AI tools.
+4. **Freight Price Estimation**: Machine learning agents predict quotation prices based on cargo inputs.
+5. **Route & Environmental Assessment**: Route and weather module evaluates shipping lane conditions.
+6. **Carrier Auditing**: Carrier Audit agent evaluates performance, compliance score, and reliability.
+7. **RAG Context Retrieval**: RAG pipeline searches the vector database for relevant logistics documentation chunks.
+8. **AI Copilot Synthesis**: AI Copilot combines retrieved document context and ML predictions into grounded responses.
+9. **Business Intelligence**: Analytics dashboard displays real-time metrics, quotation histories, and model performance.
+10. **Administrative Controls**: Admin users manage system accounts, audit logs, and trigger model retraining.
 
 ---
 
-# 🚀 Deployment
-
-The application is deployed using:
-
-- Google Colab
-- Ngrok
-- Streamlit
-
-Future deployment targets include:
-
-- Streamlit Cloud
-- Azure
-- AWS
-- Docker
-
----
-
-# 📖 User Guide
-
-### Step 1
-
-Register a new account.
-
-### Step 2
-
-Login securely.
-
-### Step 3
-
-Access AI Copilot.
-
-### Step 4
-
-Generate freight quotations.
-
-### Step 5
-
-Analyze routes and weather.
-
-### Step 6
-
-Evaluate carrier performance.
-
-### Step 7
-
-Query logistics documents using RAG.
-
-### Step 8
-
-View analytics dashboard.
-
-### Step 9
-
-Admin manages users and system activities.
-
----
-
-# 🎯 Project Outcomes
-
-The project successfully demonstrates:
-
-✔ Intelligent Freight Quotation
-
-✔ AI-Assisted Decision Making
-
-✔ Machine Learning Prediction
-
-✔ Retrieval-Augmented Generation
-
-✔ Enterprise Authentication
-
-✔ Multi-Agent AI Platform
-
-✔ Intelligent Analytics
-
-✔ Knowledge-Based Question Answering
-
-✔ Collaborative Software Development
-
----
-
-# 🤝 Acknowledgements
-
-We sincerely thank Infosys Springboard, our mentors, faculty members, and project team for their continuous guidance, support, and valuable feedback throughout the development of this project.
-
-# 📌 Milestone Overview
-
-## ✅ Milestone 1 – Secure Authentication Module
-
-Milestone 1 focused on developing a secure authentication system for the FreightQuote AI platform.
-
-### Features Implemented
-
-- User Registration
-- Secure Login
-- JWT Authentication
-- Password Hashing
-- Forgot Password
-- Security Questions
-- Email OTP Verification
-- Role-Based Authentication
-- SQLite Database Integration
-
----
-
-## ✅ Milestone 2 – Multi-Agent AI Platform
-
-Milestone 2 introduced the core AI-powered logistics modules.
-
-### Major Modules
-
-### 🤖 AI Copilot
-
-Provides intelligent logistics assistance using the Qwen 2.5 Large Language Model.
-
-### 🚢 Agent 1 – Freight Pricing
-
-Predicts freight quotation prices using Machine Learning.
-
-### 🌦 Agent 2 – Route & Weather Analysis
-
-Analyzes shipping routes and weather conditions to support logistics planning.
-
-### 📊 Agent 3 – Carrier Audit
-
-Evaluates carrier performance, compliance, and shipment reliability.
-
-### 📈 Analytics Dashboard
-
-Displays freight statistics, model performance, and business insights.
-
-### 🔄 Model Retraining
-
-Retrains machine learning models using newly available logistics datasets.
-
-### 👨‍💼 Admin Dashboard
-
-Provides administrative features including user management, monitoring, and analytics.
-
----
-
-## ✅ Milestone 3 – Project Integration & RAG Pipeline
-
-Milestone 3 focuses on integrating all previous work and extending the application with Retrieval-Augmented Generation (RAG).
-
-### Major Activities
-
-- Integration of Milestone 1 Authentication Module.
-- Integration of Milestone 2 AI & Machine Learning Modules.
-- Development of a dedicated RAG notebook.
-- Collection and organization of logistics PDF documents.
-- Document preprocessing and knowledge base preparation.
-- Vector database creation.
-- Enterprise documentation.
-- GitHub collaboration using branches and Pull Requests.
-
----
-
-# 🤖 Artificial Intelligence
-
-The project uses the following AI technologies:
-
-- Qwen 2.5 Large Language Model
-- Hugging Face Transformers
-- AI Copilot
-- Natural Language Processing
-- Retrieval-Augmented Generation (RAG)
-
----
-
-# 📊 Machine Learning
-
-The FreightQuote AI platform uses multiple machine learning algorithms for prediction and analysis.
-
-Algorithms include:
-
-- Random Forest
-- Decision Tree
-- Gradient Boosting
-- Linear Regression
-- Support Vector Regression (SVR)
-
-The best-performing model is selected for deployment after evaluation.
-
----
-
-# 📂 RAG Knowledge Base
-
-The RAG pipeline retrieves information from logistics-related documents and provides context-aware answers.
-
-The knowledge base includes:
-
-- Shipping Guidelines
-- Maritime Reports
-- Freight Policies
-- Logistics Manuals
-- Port Information
-- PDF Documents
-- Business Documentation
-
-The retrieved context is supplied to the Large Language Model to generate accurate responses.
-
----
-
-# 🛠 Technology Stack
-
-## Frontend
-
-- Streamlit
-
-## Backend
-
-- Python
-
-## Database
-
-- SQLite
-
-## Machine Learning
-
-- Scikit-learn
-- Pandas
-- NumPy
-
-## Artificial Intelligence
-
-- Hugging Face
-- Transformers
-- Qwen 2.5 LLM
-
-## Retrieval-Augmented Generation
-
-- LangChain
-- FAISS
-- Sentence Transformers
-
-## Deployment
-
-- Google Colab
-- Ngrok
-
-## Version Control
-
-- Git
-- GitHub
-
----
-
-# 📁 Project Structure
+## 📁 Repository Structure
 
 ```
 Infosys_FreightQuote_AI/
 │
 ├── README.md
+├── screenshots/
+│   ├── login.png
+│   ├── register.png
+│   ├── otp.png
+│   ├── forgot_password.png
+│   ├── user_dashboard.png
+│   ├── ai_copilot.png
+│   ├── freight_prediction.png
+│   ├── route_weather.png
+│   ├── carrier_audit.png
+│   ├── analytics_dashboard.png
+│   ├── admin_dashboard.png
+│   ├── model_retraining.png
+│   ├── rag_knowledge_base.png
+│   ├── document_upload.png
+│   ├── rag_query.png
+│   ├── semantic_search.png
+│   ├── model_comparison.png
+│   ├── champion_model.png
+│   ├── project_workflow.png
+│   └── system_architecture.png
 │
 ├── Milestone_1/
 │   ├── Milestone1.ipynb
@@ -517,9 +239,7 @@ Infosys_FreightQuote_AI/
 │   ├── auth.py
 │   ├── utils.py
 │   ├── requirements.txt
-│   ├── users.db
-│   └── screenshots/
-│      
+│   └── users.db
 │
 ├── Milestone_2/
 │   ├── FreightQuote_AI_Milestone2.ipynb
@@ -531,9 +251,7 @@ Infosys_FreightQuote_AI/
 │   ├── train_ml_freight.py
 │   ├── llm_engine_freight.py
 │   ├── requirements.txt
-│   ├── users.db
-│   └── screenshots/
-│     
+│   └── users.db
 │
 └── Milestone_3/
     ├── FreightQuote_AI_M1_M2_Combined.ipynb
@@ -541,181 +259,392 @@ Infosys_FreightQuote_AI/
     ├── README.md
     └── evaluation_queries.md
 ```
-# 🔄 Milestone 3 Workflow
-
-The following activities were carried out during Milestone 3:
-
-1. Integrated Milestone 1 Authentication Module.
-2. Integrated Milestone 2 AI and Machine Learning modules.
-3. Developed a dedicated RAG Pipeline notebook.
-4. Collected and organized logistics-related PDF documents.
-5. Prepared the document knowledge base for semantic retrieval.
-6. Configured the Retrieval-Augmented Generation workflow.
-7. Organized the project structure and documentation.
-8. Managed collaboration using GitHub branches and Pull Requests.
 
 ---
 
-# 👥 Team Contributions
+## 📌 Milestone Overview
 
-This project was completed collaboratively by a team of five members.
+The FreightQuote AI platform was constructed over three distinct development milestones:
 
-### 👩‍💻 Smita Barada
-
-**Role:** RAG Pipeline Development
-
-**Contribution:**
-- Developed the dedicated notebook for the Retrieval-Augmented Generation (RAG) pipeline.
-- Implemented knowledge base generation, document chunking, embedding generation, and FAISS vector storage.
-- Built the semantic retrieval and grounded Q&A workflow, integrating retrieved context with the AI model for intelligent responses.
+- **Milestone 1**: Built the enterprise security foundation, establishing database schemas, user registration, JWT authentication, password encryption, and multi-factor authentication.
+- **Milestone 2**: Created the core AI and Machine Learning agent infrastructure, deploying predictive freight models, route/weather analytics, carrier evaluation tools, and administrative dashboards.
+- **Milestone 3**: Consolidated Milestones 1 and 2 into an integrated platform while adding an end-to-end Retrieval-Augmented Generation (RAG) pipeline with FAISS vector search and Qwen 2.5 LLM grounding.
 
 ---
 
-### 👨‍💻 Sriharsha Thorupunuri
+## ✅ Milestone 1 – Secure Authentication Module
 
-**Role:** Documentation & GitHub Repository Management
+Milestone 1 focused on engineering a robust, secure authentication system for the platform.
 
-**Contribution:**
-- Prepared comprehensive project documentation across all milestones.
-- Created and maintained the README files.
-- Organized and managed the GitHub repository structure, branches, commits, and Pull Requests.
+### Key Features Implemented
 
----
-
-### 👨‍💻 Syed Saleem Malik
-
-**Role:** Frontend Development
-
-**Contribution:**
-- Designed and implemented the Streamlit frontend UI across authentication, dashboard, and admin panels.
-- Maintained consistent styling and responsive layout across all application pages.
-- Built out the user-facing screens for the ML agents, AI Copilot, and Admin Console.
+- **User Registration**: Form validation and account creation.
+- **Secure Login**: Session-based and JWT token authentication.
+- **Password Hashing**: Cryptographic password protection using SHA-256 / bcrypt.
+- **Forgot Password**: Password reset workflow with security validation.
+- **Security Questions**: Secondary authorization verification.
+- **Email OTP Verification**: One-Time Password generation and expiration controls.
+- **Role-Based Access Control (RBAC)**: Distinct permissions for Users and Administrators.
+- **SQLite Database Integration**: Persistent relational storage for user credentials and logs.
 
 ---
 
-### 👩‍💻 Manuru Deepika
+## ✅ Milestone 2 – Multi-Agent AI Platform
 
-**Role:** RAG & Integration Testing
+Milestone 2 introduced the core AI-powered logistics agents and analytical modules.
 
-**Contribution:**
-- Tested and verified the RAG pipeline end-to-end, including ingestion, retrieval, and the automated evaluation suite.
-- Configured and validated Hugging Face model integration (Qwen2.5-3B-Instruct).
-- Set up and tested ngrok tunnel deployment for public application access.
+### Core Modules
 
----
-
-### 👩‍💻 Sravya Nanda
-
-**Role:** QA — Authentication & Dashboard Testing
-
-**Contribution:**
-- Tested and validated the OTP verification flow, including generation, resend cooldown, and expiry.
-- Verified dashboard functionality across user and admin views.
-- Conducted functional testing of the account lockout and password-reset flows.
+- **🤖 AI Copilot**: Conversational logistics assistant powered by the Qwen 2.5 Large Language Model.
+- **🚢 Agent 1 – Freight Pricing**: Machine learning pricing agent estimating shipping costs dynamically.
+- **🌦 Agent 2 – Route & Weather Analysis**: Intelligence module evaluating transit risks and maritime weather patterns.
+- **📊 Agent 3 – Carrier Audit**: Evaluation framework auditing carrier reliability, compliance, and historic performance.
+- **📈 Analytics Dashboard**: Visual dashboard tracking quotation volume, cost distribution, and agent accuracy.
+- **🔄 Model Retraining**: Automated pipeline for updating machine learning models with newly acquired datasets.
+- **👨‍💼 Admin Dashboard**: Central control hub for system configuration, user management, and activity monitoring.
 
 ---
 
-# 🌟 Future Enhancements
+## ✅ Milestone 3 – Project Integration & RAG Pipeline
 
-The project can be extended with:
+Milestone 3 integrated all platform components into a unified solution enhanced by Retrieval-Augmented Generation.
 
-- Live Shipping APIs
-- Real-Time Vessel Tracking
-- Advanced Predictive Analytics
-- Cloud Deployment
-- Multi-Language AI Support
-- Mobile Application
-- Enterprise Reporting Dashboard
+### Major Activities
 
----
-
-# 🤝 GitHub Collaboration Workflow
-
-The project followed a collaborative GitHub workflow.
-
-Each team member:
-
-- Cloned the repository.
-- Created an individual branch from the `main` branch.
-- Completed their assigned Milestone 3 task.
-- Committed and pushed their changes.
-- Created a Pull Request.
-- The project maintainer reviewed and merged approved changes into the `main` branch.
-
-This workflow ensured smooth collaboration, version control, and code quality throughout the project.
-
----
-# 📌 Repository Guidelines
-
-To maintain consistency and code quality, the project follows these guidelines:
-
-- Each contributor works on a separate Git branch.
-- Changes are committed with meaningful commit messages.
-- Pull Requests are created for all major updates.
-- Code is reviewed before merging into the main branch.
-- Documentation is updated whenever new features are added.
-- Project structure is kept modular and easy to maintain.
+- Full integration of Milestone 1 authentication with Milestone 2 operational agents.
+- Development of a dedicated Jupyter notebook (`RAG_Pipeline.ipynb`) for vector pipeline experiments.
+- Curation and structured organization of maritime policy and logistics PDF documents.
+- Text extraction, cleaning, and recursive chunking for knowledge base preparation.
+- Embedding generation using Sentence Transformers and vector indexing via FAISS.
+- Implementation of context-grounded prompt construction for LLM response generation.
+- Automated evaluation suite setup with test queries (`evaluation_queries.md`).
+- Structured GitHub collaboration utilizing feature branches and Pull Requests.
 
 ---
 
-# 📈 Project Highlights
+## 🤖 Artificial Intelligence
 
-✔ Enterprise AI-Powered Freight Management
+FreightQuote AI leverages modern natural language processing and generative AI architectures:
 
-✔ Secure Authentication System
-
-✔ Multi-Agent AI Architecture
-
-✔ Machine Learning-Based Freight Prediction
-
-✔ Route & Weather Analysis
-
-✔ Carrier Audit & Compliance Evaluation
-
-✔ Analytics Dashboard
-
-✔ AI Copilot using Large Language Models
-
-✔ Retrieval-Augmented Generation (RAG)
-
-✔ Document Knowledge Base
-
-✔ GitHub Collaborative Development
-
-✔ Professional Documentation
+- **Qwen 2.5 Large Language Model**: Serves as the primary inference engine for natural language reasoning.
+- **Hugging Face Transformers**: Open-source framework used for loading, quantizing, and running local model pipelines.
+- **AI Copilot Interface**: Interactive conversational agent assisting users with complex logistics workflows.
+- **Natural Language Processing (NLP)**: Automated intent extraction, prompt parsing, and domain-specific entity extraction.
+- **Context Augmentation**: Dynamic injection of retrieved domain documents into LLM context windows.
 
 ---
 
-# 📚 References
+## 📊 Machine Learning
 
-The project was developed with reference to:
+The platform employs supervised machine learning models to predict freight quotation rates based on historical shipping data:
 
-- Infosys Springboard Internship Guidelines
-- Hugging Face Documentation
-- Streamlit Documentation
-- Scikit-learn Documentation
-- LangChain Documentation
-- FAISS Documentation
-- Python Documentation
-- GitHub Documentation
+### Algorithms Evaluated
 
----
+- **Random Forest Regressor**
+- **Decision Tree Regressor**
+- **Gradient Boosting Regressor**
+- **Linear Regression**
+- **Support Vector Regression (SVR)**
 
-# 🙏 Acknowledgements
+### Model Selection Workflow
 
-We would like to express our sincere gratitude to:
-
-- Infosys Springboard for providing the internship opportunity.
-- Our mentors for their continuous guidance and technical support.
-- Saveetha School of Engineering for encouraging innovation and project-based learning.
-- Our teammates for their collaboration, dedication, and valuable contributions throughout the project.
+Models undergo rigorous cross-validation. The highest-performing model according to accuracy metrics is selected and serialized as the **Champion Model** for real-time inference in production.
 
 ---
 
-# 👨‍💻 Contributors
+## 📂 Retrieval-Augmented Generation (RAG)
+
+The RAG architecture enables FreightQuote AI to answer questions using authoritative, private logistics documentation without requiring model fine-tuning.
+
+```
+Logistics PDFs ➔ Text Extraction ➔ Chunking ➔ Embeddings (Sentence Transformers) ➔ FAISS Vector Store ➔ Context Retrieval ➔ Qwen 2.5 LLM ➔ Grounded Answer
+```
+
+### RAG Pipeline Components
+
+1. **Document Ingestion**: Loading PDF files containing shipping rules, port operations, and compliance policies.
+2. **Text Preprocessing & Chunking**: Splitting documents into overlapping text chunks to preserve semantic context.
+3. **Embedding Generation**: Converting text chunks into high-dimensional dense vector representations.
+4. **Vector Storage**: Indexing vectors inside a high-performance **FAISS** index for similarity search.
+5. **Context Retrieval**: Performing k-Nearest Neighbors (k-NN) search to retrieve the most relevant text chunks for a query.
+6. **Augmented Generation**: Formatting retrieved chunks into an explicit context prompt for the Qwen 2.5 model.
+
+---
+
+## 🔐 Security Features
+
+- **JWT Authentication**: Secure, stateless JSON Web Tokens for API session management.
+- **Cryptographic Hashing**: Secure storage of user credentials using industry-standard hashing.
+- **Email OTP Verification**: Two-factor authentication via timed One-Time Passwords.
+- **Security Challenge Questions**: Alternate account recovery verification layer.
+- **Role-Based Access Control (RBAC)**: Fine-grained access privileges separating general users from administrators.
+- **Admin Control Panel**: Real-time auditing of user sign-ins, privilege updates, and account status.
+- **Secure Session Management**: Automatic session expiration and lockout protections after repeated failed attempts.
+
+---
+
+## 📊 Datasets Used
+
+The platform is trained and validated on comprehensive logistics data sources:
+
+- **Freight Pricing Dataset**: Historical shipment rates, container dimensions, origin/destination ports, and seasonal charges.
+- **Carrier Performance Dataset**: Historical delivery timeliness, damage incident rates, and compliance records.
+- **Port Information Dataset**: Geographical coordinates, handling capabilities, and port congestion metrics.
+- **Weather Dataset**: Maritime weather observations, wave heights, wind speeds, and storm warning logs.
+- **Shipment Dataset**: Active shipment status records and cargo category classifications.
+- **Logistics PDF Collection**: Maritime policy documents, international trade guidelines, and port manuals.
+
+---
+
+## 📚 Documentation Used
+
+The RAG knowledge base indexes standard industry documentation:
+
+- International Maritime Freight Policies
+- Port Operations & Handling Manuals
+- Maritime Customs & Regulatory Compliance Guidelines
+- Carrier Service Level Agreements (SLAs)
+- Logistics Risk & Liability Documents
+- Global Shipping Route Standards
+
+---
+
+## 📈 Performance Metrics
+
+Machine learning models and regression pipelines are benchmarked against standard quantitative metrics:
+
+- **Accuracy / R² Score (Coefficient of Determination)**: Evaluates total variance explained by the pricing model.
+- **Root Mean Squared Error (RMSE)**: Quantifies prediction magnitude error in currency units.
+- **Precision, Recall, & F1-Score**: Evaluates carrier compliance classification models.
+
+The model demonstrating the optimal balance of lowest RMSE and highest R² score is automatically designated as the **Champion Model**.
+
+---
+
+## 🧪 Testing Strategy
+
+The project employs a multi-tiered software testing methodology:
+
+- **Unit Testing**: Isolated verification of data preprocessing scripts, utility functions, and database handlers.
+- **Integration Testing**: Verification of seamless data flow between Streamlit UI, SQLite database, and ML endpoints.
+- **Functional Testing**: End-to-end testing of user registration, OTP generation, and password resets.
+- **User Acceptance Testing (UAT)**: Scenario testing designed around logistics manager workflows.
+- **AI Response Validation**: Verification of LLM outputs to guard against hallucination and verify context grounding.
+- **ML Model Evaluation**: Automated benchmarking of regressor models on held-out test datasets.
+
+---
+
+## 📥 Installation Guide
+
+Follow these steps to set up and run FreightQuote AI on your local environment:
+
+### Prerequisites
+
+- **Python**: Version 3.10 or higher
+- **Git**: Installed on your local machine
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/Infosys_FreightQuote_AI.git
+cd Infosys_FreightQuote_AI
+```
+
+### 2. Create and Activate Virtual Environment
+
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# Linux / macOS
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install --upgrade pip
+pip install -r Milestone_3/requirements.txt
+```
+
+### 4. Initialize Database & Models (Optional)
+
+```bash
+python Milestone_2/train_ml_freight.py
+```
+
+### 5. Launch the Streamlit Application
+
+```bash
+streamlit run Milestone_1/app.py
+```
+
+Access the application in your web browser at `http://localhost:8501`.
+
+---
+
+## 🚀 Deployment
+
+### Current Environment
+
+- **Google Colab**: Used for GPU-accelerated LLM inference and heavy model training.
+- **Ngrok**: Provides secure HTTPS tunneling to expose the local Streamlit server publicly during demonstrations.
+- **Streamlit**: Serves as the web application container.
+
+### Enterprise Target Environments
+
+- **Docker**: Containerization for reproducible microservice deployment.
+- **Streamlit Cloud**: Hosting platform for lightweight app previews.
+- **Microsoft Azure / AWS**: Enterprise cloud hosting utilizing managed database and GPU compute instances.
+
+---
+
+## 📖 User Guide
+
+1. **Account Registration**: Navigate to the registration page, enter your user details, and set up security questions.
+2. **OTP Verification**: Enter the One-Time Password sent to your registered email address to activate your account.
+3. **Secure Login**: Sign in with your credentials to generate a secure session token.
+4. **Dashboard Access**: Select your operational goal from the main navigation panel.
+5. **Generate Freight Quotations**: Input shipment origin, destination, container type, and weight into the Freight Pricing module to get instant ML cost estimates.
+6. **Analyze Route & Weather**: Run route simulations to check transit risks and current ocean weather alerts.
+7. **Audit Carrier Reliability**: Query the Carrier Audit database to compare carrier scores and compliance records.
+8. **Query RAG Knowledge Base**: Use the RAG interface to search logistics documentation and ask domain-specific questions to the AI Copilot.
+9. **Admin Administration**: Log in with administrator credentials to manage user access, review system audit logs, or trigger model retraining.
+
+---
+
+## 📸 Application Screenshots
+
+## Login
+
+![Login](screenshots/login.png)
+
+---
+
+## User Registration
+
+![Registration](screenshots/register.png)
+
+---
+
+## Email OTP Verification
+
+![OTP Verification](screenshots/otp.png)
+
+---
+
+## Forgot Password
+
+![Forgot Password](screenshots/forgot_password.png)
+
+---
+
+## User Dashboard
+
+![User Dashboard](screenshots/user_dashboard.png)
+
+---
+
+## AI Copilot
+
+![AI Copilot](screenshots/ai_copilot.png)
+
+---
+
+## Freight Price Prediction
+
+![Freight Prediction](screenshots/freight_prediction.png)
+
+---
+
+## Route & Weather Analysis
+
+![Route & Weather](screenshots/route_weather.png)
+
+---
+
+## Carrier Audit
+
+![Carrier Audit](screenshots/carrier_audit.png)
+
+---
+
+## Admin Dashboard
+
+![Admin Dashboard](screenshots/admin_dashboard.png)
+
+---
+
+## RAG Knowledge Base
+
+![RAG Knowledge Base](screenshots/rag_knowledge_base.png)
+
+---
+
+## Semantic Search Results
+
+![Semantic Search](screenshots/semantic_search.png)
+
+---
+
+## 🌟 Future Enhancements
+
+- **Live Shipping APIs**: Direct integration with AIS vessel tracking and port authority APIs.
+- **Real-Time Vessel Tracking**: Dynamic map views displaying vessel coordinates in transit.
+- **Advanced Predictive Analytics**: Time-series forecasting for global freight rate trends.
+- **Containerized Cloud Deployment**: Helm charts and Kubernetes manifests for enterprise cloud infrastructure.
+- **Multi-Language AI Support**: Multilingual LLM capabilities for international logistics teams.
+- **Mobile Application**: Native iOS/Android app for on-the-go freight monitoring.
+
+---
+
+## 🤝 GitHub Collaboration Workflow
+
+The project was engineered collaboratively following standard open-source Git practices:
+
+1. **Repository Cloning**: Each team member created a local clone of the shared central repository.
+2. **Feature Branching**: Development was isolated on task-specific branches off `main` (`feature/auth`, `feature/rag-pipeline`).
+3. **Commit Standards**: Modular commits accompanied by descriptive commit messages.
+4. **Pull Requests (PRs)**: Work was submitted for integration via detailed GitHub Pull Requests.
+5. **Peer Review**: Main maintainers reviewed code changes, verified tests, and managed branch merges.
+
+---
+
+## 📌 Repository Guidelines
+
+- **Branch Hygiene**: Never push directly to the `main` branch; submit changes via Pull Requests.
+- **Commit Messages**: Write clear, imperative commit messages summarizing changes.
+- **Code Quality**: Follow PEP 8 guidelines for Python code style and readability.
+- **Documentation**: Update markdown documentation whenever adding or altering features.
+- **Modularity**: Maintain clean separation between UI components, database operations, and ML models.
+
+---
+
+## 📈 Project Highlights
+
+- ✅ Enterprise AI-Powered Freight Management Platform
+- ✅ Secure User Authentication (JWT, OTP, RBAC)
+- ✅ Multi-Agent AI Architecture
+- ✅ Machine Learning-Based Freight Price Prediction
+- ✅ Route & Weather Condition Analysis
+- ✅ Carrier Audit & Compliance Evaluation
+- ✅ Interactive Analytics Dashboard
+- ✅ AI Copilot Powered by Qwen 2.5 LLM
+- ✅ Retrieval-Augmented Generation (RAG) Pipeline
+- ✅ PDF Document Knowledge Base & FAISS Vector Store
+- ✅ Semantic Search & Context-Grounded Q&A
+- ✅ Model Retraining & Champion Model Selection
+- ✅ Collaborative GitHub Development Workflow
+- ✅ Enterprise Documentation Standards
+
+---
+
+## 👨‍💻 Contributors
 
 | Name | Responsibility |
-|------|----------------|
+| :--- | :--- |
 | **Smita Barada** | Developed the Retrieval-Augmented Generation (RAG) pipeline notebook, including knowledge base generation, retrieval, and semantic search workflow. |
 | **Sriharsha Thorupunuri** | Prepared the complete project documentation, created and maintained the README, and managed the GitHub repository workflow. |
 | **Syed Saleem Malik** | Designed and implemented the Streamlit frontend UI across the application's authentication, dashboard, and admin panels. |
@@ -724,21 +653,35 @@ We would like to express our sincere gratitude to:
 
 ---
 
-# 📬 Contact
+## 📚 References
 
-For project-related queries or collaboration, please contact the project team through the GitHub repository or Infosys Springboard platform.
+- [Infosys Springboard Internship Guidelines](https://springboard.infosys.com)
+- [Streamlit Official Documentation](https://docs.streamlit.io)
+- [Scikit-Learn User Guide](https://scikit-learn.org/stable/user_guide.html)
+- [Hugging Face Transformers Documentation](https://huggingface.co/docs/transformers)
+- [LangChain Documentation](https://python.langchain.com/docs/)
+- [FAISS Vector Database Documentation](https://faiss.ai/)
+- [Python Official Documentation](https://docs.python.org/3/)
+- [GitHub Documentation](https://docs.github.com)
 
 ---
 
-# ⭐ Support
+## 📬 Contact
 
-If you find this project useful, please consider giving the repository a ⭐ on GitHub.
+For project inquiries, support, or collaboration details, please reach out to the project team through the official repository issues page or via the Infosys Springboard platform portal.
 
 ---
 
+## ⭐ Support
 
-# 📄 License
+If you find this project valuable or useful for your enterprise logistics AI research, please consider giving the repository a ⭐ on GitHub!
 
-This project was developed for educational purposes as part of the **Infosys Springboard Internship Program**.
+---
+
+## 📄 License
+
+This project was developed for educational and research purposes as part of the **Infosys Springboard Internship Program**.
+
+All rights belong to the respective project team members and Infosys Springboard.
 
 All rights belong to the respective project team members and Infosys Springboard.
