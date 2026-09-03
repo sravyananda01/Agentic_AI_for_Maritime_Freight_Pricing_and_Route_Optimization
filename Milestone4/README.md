@@ -1,1363 +1,614 @@
 # 🚢 FreightQuote AI
-## Agentic AI for Maritime Freight Pricing and Route Optimization
 
-**Infosys Springboard Internship — Milestone 4**  
-**Codename:** FreightQuote AI
+### AI-Powered Maritime Freight Quote Generation & Intelligence Platform
 
----
+**Transforming maritime freight quoting with AI, RAG, multi-agent intelligence, analytics, and grounded decision support.**
 
-## 📌 Project Overview
 
-FreightQuote AI is an agentic decision-support platform for an ocean-freight brokerage.
+## 📌 Overview
 
-The platform monitors global and Indian ports, calculates dynamic freight quotes, benchmarks carriers, tracks weather and customs risk, generates shipping documents, supports multilingual freight information, and provides an LLM-powered AI Copilot.
+**FreightQuote AI** is an AI-powered maritime freight intelligence platform designed to improve the way freight quotes are generated, analyzed, and managed.
 
-Milestone 4 integrates the work completed in **Milestones 1, 2 and 3** into one complete Overall Execution Application.
+The platform combines **Large Language Models, Retrieval-Augmented Generation (RAG), multi-agent intelligence, port analytics, anomaly detection, multilingual assistance, and persistent data storage** into a single professional system.
 
-The final platform combines:
+The goal is simple:
 
-- 🤖 AI Copilot
-- 🗺️ Route Intelligence
-- 💰 Dynamic Freight Pricing
-- 🏢 Carrier Performance & Capacity Intelligence
-- 🌩️ Weather Risk & Storm Telemetry
-- 📈 Margin Prediction & Yield Optimization
-- 📜 Customs, Tariff & Regulatory Intelligence
-- 📄 Digital Bill of Lading & OCR
-- 🌐 Freight Document Translation
-- 📚 Custom PDF RAG
-- 🚨 Alerts & Incidents
-- 🔔 Notifications
-- 🕸️ Knowledge Graph
-- ⚡ Digital Twin
-- 🚨 Anomaly/Risk Scanner
-- 📡 Data Feed Center
-- 🛡️ Admin Dashboard
-- 🔐 Authentication and RBAC
+> **Make maritime freight quoting faster, more intelligent, explainable, and reliable.**
+
+Instead of relying only on static rules or manually searching through documents, FreightQuote AI provides an intelligent workflow that can use structured freight information together with relevant knowledge retrieved from documents.
 
 ---
 
-# 🆕 What Milestone 4 Adds on Top of Milestones 1, 2 and 3
+# ✨ Key Features
 
-## Milestone 1 — Authentication & Security
+## 🤖 Grounded AI Copilot
 
-Milestone 1 provides the secure authentication foundation:
+An AI Copilot designed to provide more reliable responses by grounding its answers in available project knowledge and retrieved information.
 
-- Signup
-- Login
-- OTP verification
-- Security Question
-- Security Answer
-- OTP-based password recovery
-- Security-question password recovery
-- Password hashing
-- JWT/session handling
-- Logout
-- Role-Based Access Control
-- Account protection
+**Benefits:**
+
+* Reduces unsupported AI responses
+* Provides context-aware assistance
+* Supports freight-related queries
+* Works with the platform's RAG capabilities
 
 ---
 
-## Milestone 2 — Freight Intelligence
+## 🧠 Multi-Agent Freight Intelligence
 
-Milestone 2 provides the core maritime intelligence capabilities:
+FreightQuote AI uses a multi-agent approach to divide freight intelligence tasks into specialized responsibilities.
 
-- Route intelligence
-- Freight pricing
-- Carrier performance
-- Weather risk
-- Freight margin analysis
-- Customs intelligence
-- AI-based analysis
-- Operational freight database
+This allows different parts of the system to focus on areas such as:
 
----
+* Freight intelligence
+* Quote-related analysis
+* Route and port information
+* Knowledge retrieval
+* AI-assisted decision support
 
-## Milestone 3 — RAG & Document Intelligence
-
-Milestone 3 introduces document-grounded AI:
-
-- PDF processing
-- Text extraction
-- Text chunking
-- Sentence embeddings
-- FAISS vector indexing
-- Semantic retrieval
-- Document-based question answering
-- Maritime document knowledge base
-- RAG integration
+The objective is to create a more structured and modular AI workflow rather than depending on a single generic model.
 
 ---
 
-## Milestone 4 — Overall Integration
+## 📄 PDF + RAG Knowledge System
 
-Milestone 4 brings the previous milestone functionality together and adds:
+The platform includes PDF/RAG capabilities for working with external knowledge sources.
 
-- Complete integrated Streamlit application
-- RAG Engine integration
-- Kaggle DataPipeline integration
-- Nine specialized maritime agents
-- Grounded AI Copilot
-- Multilingual AI support
-- Digital Bill of Lading
-- OCR
-- Alerts and incident management
-- Notifications
-- Knowledge Graph
-- Digital Twin
-- Anomaly/Risk Scanner
-- Data Feed Center
-- Extended Admin Dashboard
-- Indian port coverage
+### RAG Workflow
+
+```text
+Documents / PDFs
+       ↓
+Document Processing
+       ↓
+Chunking
+       ↓
+Embeddings
+       ↓
+Vector Knowledge Base
+       ↓
+User Query
+       ↓
+Relevant Context Retrieval
+       ↓
+AI Model
+       ↓
+Grounded Response
+```
+
+This approach allows the AI system to retrieve relevant information before generating an answer.
+
+---
+
+## ⚓ 100+ Global Ports
+
+The upgraded platform includes support for **100+ global ports**, enabling freight-related analysis across a broader maritime network.
+
+Port information can be used for:
+
+* Port exploration
+* Freight analysis
+* Route-related intelligence
+* Port comparison
+* Visualization
+* Analytics
+
+---
+
+## 📊 Port Analytics & Map
+
+FreightQuote AI provides an analytics-oriented view of maritime ports.
+
+The platform combines port information with visual analytics to make geographical and operational information easier to understand.
+
+### Analytics Capabilities
+
+* Port exploration
+* Geographic visualization
+* Port-level analytics
+* Route-related insights
+* Interactive map-based analysis
+
+---
+
+## 🚨 Alerts & Anomaly Detection
+
+The system includes alerting and anomaly-detection capabilities to identify potentially unusual or important events.
+
+This can help users identify:
+
+* Unexpected patterns
+* Potential anomalies
+* Important freight-related events
+* Conditions requiring attention
+
+The platform is designed to move beyond simply generating information toward **proactive intelligence**.
+
+---
+
+## 🌐 Multilingual AI Copilot
+
+The Copilot is designed with multilingual interaction in mind, allowing users to interact with the AI system across supported languages.
+
+This makes the platform more accessible for users operating in different regions and international maritime environments.
+
+---
+
+## 🛡️ Admin Dashboard
+
+FreightQuote AI includes an administrative dashboard for managing and monitoring the platform.
+
+The admin functionality provides a centralized interface for platform-level operations and oversight.
+
+---
+
+## 💾 Persistent SQLite Database
+
+The platform uses **SQLite** for persistent application data storage.
+
+This provides a lightweight database layer suitable for:
+
+* Local development
+* Demonstration
+* Colab-based execution
+* Persistent application data
+* Structured project storage
 
 ---
 
 # 🏗️ System Architecture
 
 ```text
-                              👤 USER
-                                │
-                                ▼
-                    ┌────────────────────────┐
-                    │ AUTHENTICATION & RBAC   │
-                    │ Signup / Login / OTP   │
-                    │ Security Questions      │
-                    │ JWT / Session / Logout  │
-                    └────────────┬───────────┘
-                                 │
-                                 ▼
-                    ┌────────────────────────┐
-                    │      STREAMLIT APP      │
-                    │      FreightQuote AI    │
-                    └────────────┬───────────┘
-                                 │
-             ┌───────────────────┼────────────────────┐
-             │                   │                    │
-             ▼                   ▼                    ▼
-       🤖 AI COPILOT        ⚙️ AI AGENTS          🛡️ ADMIN
-             │                   │                    │
-             │        ┌──────────┼───────────┐        │
-             │        │          │           │        │
-             │        ▼          ▼           ▼        │
-             │      Route      Pricing     Carrier    │
-             │      Weather    Margin      Customs    │
-             │      OCR        Translation             │
-             │                                         │
-             └────────────────┬────────────────────────┘
-                              │
-                  ┌───────────┴───────────┐
-                  │                       │
-                  ▼                       ▼
-             📚 RAG ENGINE          📊 DATA PIPELINE
-                  │                       │
-                  ▼                       ▼
-             PDF Documents          Kaggle Dataset
-                  │                       │
-                  ▼                       ▼
-             Text Chunking           Data Cleaning
-                  │                       │
-                  ▼                       ▼
-             Embeddings              Transformation
-                  │                       │
-                  ▼                       ▼
-             FAISS Vector DB         Validated Data
-                  │                       │
-                  └───────────┬───────────┘
-                              │
-                              ▼
-                       🗄️ SQLITE DATABASE
-                              │
-                              ▼
-                       GROUNDED RESULTS
-
-
----
-
-🔄 Milestone 4 Execution Workflow
-
-The mandatory execution order is:
-
-STEP 01
-RAG ENGINE
-    │
-    ▼
-STEP 02
-KAGGLE DATAPIPELINE
-    │
-    ▼
-STEP 03
-OVERALL APPLICATION
-    │
-    ▼
-AI COPILOT + AGENTS + PLATFORM FEATURES
-
-
----
-
-🤖 AI COPILOT
-
-Purpose
-
-The AI Copilot is the natural-language assistant of the FreightQuote AI platform.
-
-It answers questions related to:
-
-Shipments
-
-Pricing
-
-Routes
-
-Weather
-
-Customs
-
-Carriers
-
-Maritime documents
-
-
-Working
-
-User Question
-      │
-      ▼
-Intent Classification
-      │
-      ▼
-Grounded Query
-      │
-      ├──────── SQL / Database Facts
-      │
-      ├──────── Route Solver
-      │
-      ├──────── Freight Quote Calculator
-      │
-      └──────── RAG Retrieval
-                       │
+                         ┌─────────────────────┐
+                         │      User / Admin    │
+                         └──────────┬──────────┘
+                                    │
+                                    ▼
+                         ┌─────────────────────┐
+                         │   Professional UI   │
+                         └──────────┬──────────┘
+                                    │
+                ┌───────────────────┼───────────────────┐
+                │                   │                   │
+                ▼                   ▼                   ▼
+        ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+        │ AI Copilot   │    │ Freight      │    │ Port         │
+        │              │    │ Intelligence │    │ Analytics    │
+        └──────┬───────┘    └──────┬───────┘    └──────────────┘
+               │                   │
+               ▼                   ▼
+        ┌─────────────────────────────────┐
+        │       Multi-Agent Layer         │
+        └───────────────┬─────────────────┘
+                        │
+              ┌─────────┴─────────┐
+              ▼                   ▼
+      ┌──────────────┐    ┌──────────────┐
+      │ RAG / PDF    │    │ AI Models    │
+      │ Knowledge    │    │ & Inference  │
+      └──────┬───────┘    └──────┬───────┘
+             │                   │
+             └─────────┬─────────┘
                        ▼
-                Retrieved Context
-                       │
-                       ▼
-                 Qwen LLM
-                       │
-                       ▼
-              Grounded Answer
-                       │
-                       ▼
-              Optional Translation
-
-AI Copilot Quality
-
-The Copilot is designed to be:
-
-Multilingual
-
-Grounded
-
-Creative
-
-
-It can provide:
-
-What-if scenarios
-
-Alternative strategies
-
-Actionable recommendations
-
-Intelligent summaries
-
-Business ideas
-
-
-The Copilot should not fabricate facts, numbers or sources.
-
-When evidence is unavailable, it should clearly state that the information is unavailable.
-
+              ┌──────────────────┐
+              │ SQLite Database  │
+              └──────────────────┘
+```
 
 ---
 
-⚙️ AGENT 1 — Global Ocean Port & Route Intelligence
+# 🔄 How FreightQuote AI Works
 
-Purpose
+### 1. User Input
 
-Provides port telemetry and maritime route intelligence across monitored global and Indian ports.
+The user provides a freight-related request through the application.
 
-Key Features
+### 2. Intelligent Processing
 
-🗺️ Live interactive port network map
+The request is analyzed and routed through the appropriate intelligence components.
 
-Port congestion monitoring
+### 3. Knowledge Retrieval
 
-Active vessel information
+When relevant, the RAG pipeline retrieves useful information from the available document knowledge base.
 
-Dynamic route optimizer
+### 4. Multi-Agent Reasoning
 
-Port-to-port distance calculation
+Specialized AI components process the information required for the task.
 
-Sailing-time estimation
+### 5. Grounded AI Response
 
-Route and port risk classification
+The Copilot generates a response using the available context to reduce unsupported responses.
 
-AI Route Advisor
+### 6. Analytics & Alerts
 
-Maritime fuel-efficiency analysis
-
-
-Working
-
-Origin Port + Destination Port
-              │
-              ▼
-     Haversine Distance
-              │
-              ▼
-      Sailing-Time Estimate
-              │
-              ▼
-       Route Risk Analysis
-              │
-              ▼
-      Route Recommendation
-
-ML Models
-
-RandomForest
-
-GradientBoosting
-
-DecisionTree
-
-LogisticRegression
-
-SVC
-
-
-Charts
-
-Folium Map
-
-Bar Chart
-
-Scatter Plot
-
-
-Chart Interpretation
-
-On the port map:
-
-Green = lower congestion
-
-Orange = medium congestion
-
-Red/darker red = higher congestion
-
-
-Higher congestion indicates greater expected dwell time.
-
+Relevant information can be visualized through port analytics, maps, and alert mechanisms.
 
 ---
 
-💰 AGENT 2 — Dynamic Freight Pricing & Rate Calculator
+# 🛠️ Technology Stack
 
-Purpose
+| Category            | Technology            |
+| ------------------- | --------------------- |
+| Programming         | Python                |
+| Environment         | Google Colab          |
+| AI                  | Large Language Models |
+| AI Architecture     | Multi-Agent System    |
+| Knowledge Retrieval | RAG                   |
+| Documents           | PDF Processing        |
+| Database            | SQLite                |
+| Visualization       | Maps & Analytics      |
+| Language Support    | Multilingual AI       |
+| Runtime             | GPU Recommended       |
 
-Calculates and benchmarks ocean freight quotes.
+### Recommended Runtime
 
-Key Features
+For faster AI inference, the project recommends using a GPU runtime such as:
 
-From-to freight rate calculator
-
-Base ocean rate
-
-Fuel surcharge
-
-Customs/terminal handling fee
-
-Final freight price
-
-Multi-model freight-pricing benchmark
-
-Waterfall cost analysis
-
-Correlation heatmap
-
-Quote-value funnel
-
-AI Pricing Advisor
-
-
-Working
-
-Base Ocean Rate
-       │
-       ▼
-Fuel Surcharge
-       │
-       ▼
-Customs / Terminal Fee
-       │
-       ▼
-Final Freight Price
-
-ML Models
-
-RandomForestRegressor
-
-GradientBoostingRegressor
-
-DecisionTreeRegressor
-
-LinearRegression
-
-
-Charts
-
-Waterfall
-
-Heatmap
-
-Funnel
-
-Bar Chart
-
-
-Chart Interpretation
-
-The waterfall chart shows how the final quote is built:
-
-Base Cost
-   +
-Fuel
-   +
-Fees
-   =
-Final Price
-
+* **NVIDIA T4**
+* **NVIDIA L4**
+* **NVIDIA A100**
 
 ---
 
-🏢 AGENT 3 — Carrier Performance & Safety Audit
+# 📁 Project Structure
 
-Purpose
+```text
+FreightQuote-AI/
+│
+├── 📓 FreightQuote_AI_Milestone4_Professional_Colab.ipynb
+│
+├── 📂 data/
+│   ├── documents/
+│   ├── ports/
+│   └── knowledge_base/
+│
+├── 📂 models/
+│
+├── 📂 rag/
+│
+├── 📂 agents/
+│
+├── 📂 database/
+│
+├── 📂 ui/
+│
+├── 📂 screenshots/
+│
+└── README.md
+```
 
-Benchmarks shipping carriers based on safety, reliability and fleet capacity.
-
-Key Features
-
-Carrier reliability analysis
-
-Safety analysis
-
-Fleet capacity analysis
-
-8-parameter capacity simulator
-
-Carrier comparison
-
-Risk analysis
-
-AI Carrier Advisor
-
-
-Working
-
-Carrier Data
-     │
-     ▼
-Performance Analysis
-     │
-     ▼
-Reliability + Safety + Capacity
-     │
-     ▼
-Risk Evaluation
-     │
-     ▼
-Carrier Recommendation
-
-ML Models
-
-RandomForestClassifier
-
-GradientBoostingClassifier
-
-DecisionTreeClassifier
-
-LogisticRegression
-
-SVC
-
-
-Charts
-
-Treemap
-
-Scatter Plot
-
-Heatmap
-
-Radar
-
-
-Chart Interpretation
-
-In the treemap:
-
-Larger rectangle = larger fleet contribution
-
-High-risk branches require more attention
-
-Low-rated high-risk carriers should be reviewed first
-
-
-In the scatter plot:
-
-Higher rating + higher on-time percentage = more dependable carrier
-
-
+> The exact repository structure should match the folders actually committed to GitHub. Don't add folders to this section just because they sound appropriate.
 
 ---
 
-🌩️ AGENT 4 — Global Weather Risk & Harbor Safety Intelligence
+# 🚀 Getting Started
 
-Purpose
+## 1. Clone the Repository
 
-Monitors severe weather and storm risk at monitored ports.
+```bash
+git clone https://github.com/<YOUR-USERNAME>/<YOUR-REPOSITORY>.git
+cd <YOUR-REPOSITORY>
+```
 
-Key Features
+## 2. Open the Notebook
 
-🗺️ Live storm-severity port map
+Open:
 
-Weather monitoring
+```text
+FreightQuote_AI_Final_Code_(1)_(1).ipynb
+```
 
-Storm risk analysis
+using **Google Colab**.
 
-Harbor safety analysis
+## 3. Select a GPU Runtime
 
-Wind-speed analysis
+In Google Colab:
 
-Wave-height analysis
+```text
+Runtime
+   ↓
+Change runtime type
+   ↓
+Hardware accelerator
+   ↓
+GPU
+```
 
-Weather-risk prediction
+A T4/L4/A100 runtime is recommended for faster model inference.
 
-AI Weather Advisor
+## 4. Run the Notebook
 
+Execute the notebook cells sequentially.
 
-Working
-
-Port Coordinates
-      │
-      ▼
-Live Weather Data
-      │
-      ▼
-Weather Risk Analysis
-      │
-      ▼
-Safety Classification
-      │
-      ▼
-Weather Recommendation
-
-Live Weather
-
-The platform uses the Open-Meteo REST API through the weather context layer.
-
-ML Models
-
-RandomForest
-
-GradientBoosting
-
-DecisionTree
-
-LogisticRegression
-
-SVC
-
-LinearRegression
-
-
-Charts
-
-Folium Map
-
-Bar Chart
-
-Scatter Plot
-
-
-Chart Interpretation
-
-In the wind-speed vs wave-height chart:
-
-Points within the safety range indicate lower risk.
-
-Points beyond the safety threshold indicate higher harbor risk.
-
-High-risk ports may require anchorage or rerouting.
-
-
+The notebook acts as the launcher for the upgraded Milestone 4 FreightQuote AI platform.
 
 ---
 
-📈 AGENT 5 — Freight Margin Optimizer & Profitability Intelligence
+# 🎯 Project Objectives
 
-Purpose
+FreightQuote AI focuses on solving several challenges in maritime freight intelligence:
 
-Analyzes where freight margin is earned or lost.
+### Traditional Challenge
 
-Key Features
+```text
+Manual Information Search
+        ↓
+Scattered Data
+        ↓
+Time-Consuming Analysis
+        ↓
+Limited Automation
+        ↓
+Delayed Decision Making
+```
 
-10-parameter rate simulator
+### FreightQuote AI Approach
 
-Carrier yield matrix
-
-Freight margin prediction
-
-Cost analysis
-
-Profitability analysis
-
-Margin optimization
-
-AI Margin Advisor
-
-
-Working
-
-Freight Revenue
-      │
-      ▼
-Cost Components
-      │
-      ▼
-Margin Calculation
-      │
-      ▼
-Profitability Analysis
-      │
-      ▼
-Yield Recommendation
-
-ML Models
-
-RandomForestRegressor
-
-GradientBoostingRegressor
-
-DecisionTreeRegressor
-
-LinearRegression
-
-
-Charts
-
-Box Plot
-
-Heatmap
-
-Histogram
-
-
-Chart Interpretation
-
-A carrier with a low median margin and repeated low-margin deals may require renegotiation.
-
-A strong negative relationship between fuel surcharge and margin indicates fuel volatility as a major margin risk.
-
+```text
+User Request
+     ↓
+AI Processing
+     ↓
+Knowledge Retrieval
+     ↓
+Multi-Agent Intelligence
+     ↓
+Grounded Response
+     ↓
+Analytics / Alerts
+     ↓
+Better Decision Support
+```
 
 ---
 
-📜 AGENT 6 — Customs Intelligence & HS Code Compliance
+# 🌟 Milestone 4 Upgrades
 
-Purpose
+The Milestone 4 version introduces several major platform improvements:
 
-Assesses regulatory clearance risk based on country and cargo type.
+| Feature                     | Status |
+| --------------------------- | :----: |
+| 🤖 Grounded AI Copilot      |    ✅   |
+| ⚓ 100+ Global Ports         |    ✅   |
+| 🎨 Professional UI          |    ✅   |
+| 📊 Port Analytics           |    ✅   |
+| 🗺️ Port Map                |    ✅   |
+| 🧠 Multi-Agent Intelligence |    ✅   |
+| 📄 PDF / RAG Tools          |    ✅   |
+| 🚨 Alerts                   |    ✅   |
+| 🔍 Anomaly Detection        |    ✅   |
+| 🛡️ Admin Dashboard         |    ✅   |
+| 💾 SQLite Persistence       |    ✅   |
+| 🌐 Multilingual Copilot     |    ✅   |
 
-Key Features
+## 🧠 Multi-Agent Maritime Intelligence
 
-Customs intelligence
+FreightQuote AI is built around a specialized multi-agent architecture where individual AI agents focus on different aspects of maritime freight operations.
 
-HS Code compliance
+| Agent / Module | Purpose |
+|---|---|
+| 🤖 AI Copilot | Conversational AI for freight-related assistance |
+| ⚓ Port Network | Global maritime port exploration and intelligence |
+| 🧭 Route AI | Maritime route analysis and decision support |
+| 💰 Spot Quotes | Freight spot-quote and pricing intelligence |
+| 🚚 Carriers | Carrier-related freight intelligence |
+| 🌦️ Weather Risk | Weather-related shipping risk analysis |
+| 📈 Margin Predictor | Freight margin and profitability prediction |
+| 📑 Customs & Tariff | Customs and tariff-related intelligence |
+| 📄 Docs (OCR) | Extracts information from documents using OCR |
+| 🚨 Alerts & Incidents | Monitors important incidents and operational events |
+| 🔔 Notifications | Delivers important system notifications |
+| 🌐 Translation | Multilingual interaction and translation |
+| 🕸️ Knowledge Graph | Represents relationships between maritime entities and information |
+| 🔄 Digital Twin | Simulates and represents the maritime operational environment |
+| 🔍 Anomaly Scanner | Detects unusual patterns and potential anomalies |
+| 📚 PDF RAG Studio | Enables document-based RAG and knowledge retrieval |
+| ☁️ Data Feed Center | Centralized data-feed management |
+| 🛡️ Admin Dashboard | Platform administration and monitoring |
+---
 
-Customs duty simulator
+# 🔬 AI & RAG Pipeline
 
-Regulatory document matrix
+The knowledge-grounding pipeline follows a retrieval-based architecture:
 
-Clearance-risk analysis
-
-Duty exposure analysis
-
-AI Customs Advisor
-
-
-Working
-
-Cargo Type
-     │
-     ▼
-HS Code + Origin Country
-     │
-     ▼
-Customs / Duty Analysis
-     │
-     ▼
-Clearance Risk
-     │
-     ▼
-Compliance Recommendation
-
-ML Models
-
-RandomForestClassifier
-
-GradientBoostingClassifier
-
-DecisionTreeClassifier
-
-LogisticRegression
-
-SVC
-
-
-Charts
-
-Sunburst
-
-Scatter Plot
-
-
-Chart Interpretation
-
-Sunburst:
-
-Inner Ring = Origin Country
-Outer Ring = Cargo Type
-
-Red-toned areas indicate higher clearance risk.
-
-In the duty-vs-risk scatter:
-
-High duty + high risk = lanes requiring greater attention
-
-
+```text
+             ┌───────────────┐
+             │ PDF Documents │
+             └───────┬───────┘
+                     ↓
+             ┌───────────────┐
+             │ Text Extract  │
+             └───────┬───────┘
+                     ↓
+             ┌───────────────┐
+             │   Chunking    │
+             └───────┬───────┘
+                     ↓
+             ┌───────────────┐
+             │  Embeddings   │
+             └───────┬───────┘
+                     ↓
+             ┌───────────────┐
+             │ Vector Search │
+             └───────┬───────┘
+                     ↓
+              Relevant Context
+                     ↓
+             ┌───────────────┐
+             │ AI / Copilot  │
+             └───────┬───────┘
+                     ↓
+             Grounded Response
+```
 
 ---
 
-📄 AGENT 7 — Quote Document & Bill of Lading Generator
+# 💡 Why This Project?
 
-Purpose
+Maritime freight operations involve large amounts of information distributed across documents, ports, routes, and operational data.
 
-Produces shipping documents from live freight quote information.
+FreightQuote AI brings these information sources together into an AI-assisted environment.
 
-Key Features
+### The platform aims to provide:
 
-Freight quote PDF
-
-Bill of Lading generation
-
-Shipping document generation
-
-OCR/document processing
-
-
-Working
-
-Live Quote Data
-      │
-      ▼
-Document Generation
-      │
-      ├── Freight Quote PDF
-      │
-      └── Bill of Lading
-
-Technologies
-
-Python
-
-PDF processing
-
-ReportLab / FPDF
-
-OCR
-
-
+* ⚡ Faster information access
+* 🧠 AI-assisted analysis
+* 📚 Knowledge-grounded responses
+* ⚓ Maritime port intelligence
+* 📊 Visual analytics
+* 🚨 Proactive anomaly awareness
+* 🌐 Multilingual interaction
+* 🛡️ Administrative control
 
 ---
 
-🌐 AGENT 8 — Freight Document & Policy Translation Engine
+# 📈 Future Enhancements
 
-Purpose
+Potential future improvements include:
 
-Provides multilingual translation for freight documents and policies.
-
-Key Features
-
-Real-time text translation
-
-Maritime document translation
-
-Batch translation
-
-Maritime trade glossary
-
-BAF terminology
-
-TEU terminology
-
-HS Code terminology
-
-Dwell-time terminology
-
-Supported languages
-
-
-Working
-
-Freight Text / Document
-          │
-          ▼
-    Translation Engine
-          │
-          ▼
-     Target Language
-
-Technology
-
-Facebook NLLB-200
-
-Distilled 600M model
-
-NLP
-
-Transformers
-
-
+* Real-time freight-rate integration
+* Live vessel tracking
+* Advanced route optimization
+* Dynamic freight-price prediction
+* Cloud deployment
+* API-based architecture
+* Scalable vector databases
+* Advanced model evaluation
+* Automated quote comparison
+* Real-time maritime data integration
 
 ---
 
-📚 AGENT 9 — Custom PDF Knowledge Base & Vector RAG Engine
+# 👥 Team
 
-Purpose
+**Project:** FreightQuote AI
+**Milestone:** 4
+**Domain:** Artificial Intelligence + Maritime Logistics
+**Platform:** Google Colab
 
-Provides a custom RAG workbench for maritime PDF documents.
+### Contributors
 
-Supported document types include:
-
-Customs manuals
-
-Carrier SOPs
-
-Contracts
-
-Maritime policies
-
-
-Working
-
-Upload PDF
-    │
-    ▼
-Text Extraction
-    │
-    ▼
-Text Chunking
-    │
-    ▼
-Sentence Embeddings
-    │
-    ▼
-FAISS Vector Index
-    │
-    ▼
-User Question
-    │
-    ▼
-Similarity Search
-    │
-    ▼
-Relevant Document Chunks
-    │
-    ▼
-LLM
-    │
-    ▼
-Grounded Answer
-
-Technologies
-
-PDF processing
-
-LangChain text splitters
-
-Sentence Transformers
-
-FAISS
-
-Qwen LLM
-
-
+| Name                | Role          |
+| -----------         | ------------- |
+| Sai Laghuvar        | AI / ML       |
+| Vishnu Vardhan Reddy| RAG / LLM     |
+| Syed Saleem Malik   | Backend       |
+| Sravya Nanda        | Frontend / UI |
+| Smita Barada        | README.MD     |
 
 ---
 
-🚨 NOTIFICATIONS — Unified Incident & Alert Center
+# 📚 Project Context
 
-Purpose
+This project was developed as part of an **AI-based maritime freight intelligence and quote-generation initiative**, combining modern AI techniques with domain-specific freight knowledge.
 
-Provides one centralized place for operational alerts and incidents.
-
-Key Features
-
-Live incident feed
-
-Shipment delay alerts
-
-Weather hold alerts
-
-Customs issue alerts
-
-Severity information
-
-One-click incident resolution
-
-
-Visualization
-
-Pie Chart for severity breakdown
-
-
+The Milestone 4 implementation focuses on turning the earlier freight-quote concept into a more complete AI-assisted platform with grounded Copilot functionality, multi-agent intelligence, port analytics, RAG tools, alerts, administration, persistence, and multilingual interaction.
 
 ---
 
-🕸️ KNOWLEDGE GRAPH
+# ⚠️ Disclaimer
 
-Purpose
+This project is intended for **educational, research, and demonstration purposes**.
 
-Represents relationships between maritime entities.
-
-Example
-
-PORT
-                   │
-          ┌────────┴────────┐
-          │                 │
-        ROUTE           WEATHER
-          │
-       SHIPMENT
-          │
-       CARRIER
-
-Main Relationships
-
-Port ↔ Route
-
-Route ↔ Shipment
-
-Shipment ↔ Carrier
-
-Port ↔ Weather
-
-
+AI-generated outputs should be validated against authoritative maritime, commercial, and operational data before being used for real-world business decisions.
 
 ---
 
-⚡ DIGITAL TWIN
+# ⭐ Support the Project
 
-Purpose
+If you find this project useful:
 
-Provides a digital representation of the maritime freight network.
+⭐ **Star the repository**
 
-Uses
+🍴 **Fork the repository**
 
-Network simulation
+🐛 **Report issues**
 
-Operational analysis
+💡 **Suggest improvements**
 
-Scenario analysis
-
-Decision support
-
-
-Working
-
-Real Maritime Network
-          │
-          ▼
-      Digital Twin
-          │
-          ▼
-       Simulation
-          │
-          ▼
-    Decision Support
-
+🤝 **Contribute**
 
 ---
 
-🚨 ANOMALY / RISK SCANNER
+### 🚢 FreightQuote AI
 
-Purpose
+**AI-powered intelligence for smarter maritime freight decisions.**
 
-Detects unusual patterns and potential operational risks.
+# 📸 Application Screenshots
 
-Examples
+### 🚢 SignUp page:
+<img width="1908" height="888" alt="Screenshot 2026-08-18 184737" src="https://github.com/user-attachments/assets/7fdc0fcf-8ccb-4723-a6c6-7ac40b1ea12e" />
 
-Shipment anomalies
+### 🤖 AI Copilot:
+The main conversational interface of the platform. Users can interact with the AI to ask freight-related questions and receive intelligent assistance.
+<img width="1898" height="868" alt="Screenshot 2026-08-18 190536" src="https://github.com/user-attachments/assets/5f846ccd-cc88-4c8e-ad47-09ee0b43adb6" />
 
-Freight-value anomalies
+### ⚓ Port Network:
+Provides access to the maritime port network and information about supported ports, helping users explore the global freight ecosystem.
+<img width="1901" height="900" alt="Screenshot 2026-08-18 190756" src="https://github.com/user-attachments/assets/2ec93cd1-061d-4563-a2fa-cf593696bb12" />
 
-Port anomalies
+### 🧭 Agent 1 — Route AI:
+Analyzes and assists with maritime route-related decisions, helping users understand possible routes and route information.
+<img width="1903" height="742" alt="Screenshot 2026-08-18 191000" src="https://github.com/user-attachments/assets/d821d952-5bba-44fb-bbc5-57da6c9d2d85" />
 
-Operational outliers
+### 🧭 Agent 2 — Spot Quotes:
+Handles spot freight quote intelligence, helping users work with freight pricing and quote-related information.
+<img width="1911" height="898" alt="Screenshot 2026-08-18 191151" src="https://github.com/user-attachments/assets/af4ae157-b499-4ada-87c4-423cde5d0521" />
 
-Network-level risks
+### 🧭 Agent 3 — Carriers:
+Provides carrier-related intelligence, helping users analyze or retrieve information associated with shipping carriers.
+<img width="1908" height="918" alt="Screenshot 2026-08-18 191543" src="https://github.com/user-attachments/assets/789afea9-0e3a-4c61-80ac-721f38be9688" />
 
+### 🌦️ Agent 4 — Weather Risk:
+Focuses on weather-related maritime risks, helping identify how weather conditions can potentially affect shipping operations and routes.
+<img width="1906" height="857" alt="Screenshot 2026-08-18 191559" src="https://github.com/user-attachments/assets/db54a6ac-3c73-47ff-bad8-cbabe4d3ae7e" />
 
-Working
+### 📈 Agent 5 — Margin Predictor:
+Focuses on margin prediction, helping estimate potential profitability associated with freight quotations.
+<img width="1903" height="908" alt="Screenshot 2026-08-18 191620" src="https://github.com/user-attachments/assets/38495d66-ca69-4fe6-8056-62c1345908bf" />
 
-Operational Data
-      │
-      ▼
-Anomaly Detection
-      │
-      ▼
-Normal / Abnormal
-      │
-      ▼
-Risk Identification
-      │
-      ▼
-Alert / Investigation
+### 📑 Agent 6 — Customs & Tariff:
+Provides intelligence related to customs requirements and tariffs, helping users understand trade-related cost and regulatory considerations.
+<img width="1908" height="908" alt="Screenshot 2026-08-18 191651" src="https://github.com/user-attachments/assets/72c4e90e-333c-4618-bdd0-58299de0d6b7" />
 
+### 📄 Agent 7 — Docs (OCR):
+Uses Optical Character Recognition (OCR) to extract useful information from documents, making document-based freight information easier to process.
+<img width="1917" height="891" alt="Screenshot 2026-08-18 191712" src="https://github.com/user-attachments/assets/2d2887d1-bd84-423c-aa12-c2af190f3375" />
 
----
+### 🚨 Agent 8 — Alerts & Incidents):
 
-📡 DATA FEED CENTER
+Handles alerts and incident-related intelligence, helping users identify and monitor important events that may affect freight operations.
 
-Purpose
+### 🔔Notification:
 
-Provides raw and operational data for review and application use.
+Provides notifications for important system events, alerts, or updates so users don't have to continuously monitor the platform.
 
-Working
+### 🌐 Agent 8 — Translation:
 
-Kaggle / Operational Data
-          │
-          ▼
-      Data Pipeline
-          │
-          ▼
-Data Cleaning / Processing
-          │
-          ▼
-      Application Data
-          │
-          ▼
-        AI Agents
+The screenshot labels this as Agent 8: Translation. It supports multilingual interaction and translation capabilities within the platform.
+<img width="1907" height="907" alt="Screenshot 2026-08-18 192104" src="https://github.com/user-attachments/assets/4824f9bf-9953-4288-8aae-fcd348f413aa" />
 
-Features
 
-Raw operational data review
+### 🕸️ Knowledge Graph:
+Connects and represents relationships between relevant entities and information, providing a structured knowledge layer for the system.
+<img width="1901" height="905" alt="Screenshot 2026-08-18 192123" src="https://github.com/user-attachments/assets/77899bcf-d8a1-4451-afef-f9f6aa61c6b7" />
 
-Data access
+### 🔄 Digital Twin:
+Provides a digital representation/simulation of the maritime environment or operational system, allowing the platform to model and explore scenarios.
+<img width="1897" height="893" alt="Screenshot 2026-08-18 192140" src="https://github.com/user-attachments/assets/edc4fcd3-b26d-4751-9ba6-29a210a5004e" />
 
-Data export/review
+### 🔍 Anomaly Scanner:
+Looks for unusual or abnormal patterns/events that may require attention.
+<img width="1900" height="897" alt="Screenshot 2026-08-18 192207" src="https://github.com/user-attachments/assets/f601a55a-a821-450b-b04d-06d8ff46ac7d" />
 
-Application data availability
+### 📚 Agent 9 — PDF RAG Studio:
+Provides a Retrieval-Augmented Generation (RAG) environment for working with PDF documents and using their content as a knowledge source for AI responses.
+<img width="1902" height="860" alt="Screenshot 2026-08-18 192236" src="https://github.com/user-attachments/assets/76a40ec1-71b4-4991-9192-a526f25a9280" />
 
+### ☁️ Data Feed Center:
+Acts as a central area for managing or accessing incoming data feeds used by the platform.
+<img width="1905" height="892" alt="Screenshot 2026-08-18 192252" src="https://github.com/user-attachments/assets/f732bcd4-b68d-4391-86f5-c65e47ebbd3e" />
 
-
----
-
-🛡️ ADMIN DASHBOARD
-
-Purpose
-
-Provides administration and system monitoring.
-
-User Management
-
-Add users
-
-Delete users
-
-Promote users
-
-Demote users
-
-Unlock users
-
-Assign roles
-
-
-System Health
-
-Database status
-
-LLM status
-
-Translation engine status
-
-
-ML Performance
-
-The application can maintain a model-performance ledger containing:
-
-Accuracy
-
-F1
-
-R²
-
-
-Audit
-
-Chat history
-
-User activity
-
-Audit trail
-
-
-
----
-
-🔐 ROLE-BASED ACCESS CONTROL
-
-Role	Access
-
-Admin	All tabs including Admin Dashboard
-Freight Broker / Regional Ops Manager	All agents and AI Copilot except Admin Dashboard
-Dispatcher	AI Copilot and selected operational agents
-Customer / Client	AI Copilot and quote-related agents
-
-
-
----
-
-🇮🇳 INDIAN PORT COVERAGE
-
-Port	State	Coverage / Usage
-
-🇮🇳 Mumbai (JNPT)	Maharashtra	Port, route, freight and operational analysis
-🇮🇳 Mundra	Gujarat	Port, route, freight and operational analysis
-🇮🇳 Chennai	Tamil Nadu	Port, route, freight and operational analysis
-🇮🇳 Cochin	Kerala	Port, route, freight and operational analysis
-
-
-These ports provide localized Indian maritime coverage for the application's route, freight, weather and operational intelligence.
-
-
----
-
-📊 KAGGLE DATA PIPELINE
-
-Purpose
-
-The Kaggle DataPipeline prepares freight-related data before it is used by the Overall Application.
-
-Pipeline
-
-Kaggle Dataset
-      │
-      ▼
-Data Loading
-      │
-      ▼
-Data Cleaning
-      │
-      ▼
-Data Transformation
-      │
-      ▼
-Data Validation
-      │
-      ▼
-Application Data
-      │
-      ▼
-SQLite / AI Agents
-
-
----
-
-📚 RAG ENGINE
-
-Purpose
-
-The RAG Engine provides document-grounded knowledge to the application.
-
-Pipeline
-
-Maritime Documents
-       │
-       ▼
-PDF Processing
-       │
-       ▼
-Text Extraction
-       │
-       ▼
-Chunking
-       │
-       ▼
-Embeddings
-       │
-       ▼
-FAISS Vector Store
-       │
-       ▼
-User Question
-       │
-       ▼
-Relevant Context
-       │
-       ▼
-LLM
-       │
-       ▼
-Grounded Answer
-
-
----
-
-🧠 MACHINE LEARNING
-
-Different agents benchmark classical ML models for their prediction tasks.
-
-Classification
-
-Used for:
-
-Carrier reliability
-
-Weather risk
-
-Customs clearance risk
-
-
-Models:
-
-Random Forest
-
-Gradient Boosting
-
-Decision Tree
-
-Logistic Regression
-
-SVC
-
-
-Metrics:
-
-Accuracy
-
-F1 Score
-
-
-Regression
-
-Used for:
-
-Freight pricing
-
-Freight margin
-
-
-Models:
-
-Random Forest Regressor
-
-Gradient Boosting Regressor
-
-Decision Tree Regressor
-
-Linear Regression
-
-
-Metrics:
-
-R²
-
-RMSE
-
-
-
----
-
-📊 VISUALIZATION
-
-Chart Type	Purpose
-
-Bar Chart	Compare values between categories
-Scatter Plot	Show relationship between numeric variables
-Box Plot	Show median, quartiles and outliers
-Histogram	Show data distribution
-Sunburst	Show hierarchical data
-Treemap	Show hierarchical proportions
-Waterfall	Show sequential additions/subtractions
-Funnel	Show sequential pipeline stages
-Heatmap	Show relationships/correlations
-Folium Map	Show geographic information
-Radar	Compare multiple carrier parameters
-
-
-
----
-
-🛠️ TECHNOLOGY STACK
-
-Layer	Technology	Purpose
-
-Frontend	Streamlit	Web application
-Navigation	streamlit-option-menu	Application navigation
-Backend	Python	Application and agent logic
-Database	SQLite	Operational freight data
-LLM	Qwen2.5-3B-Instruct	Natural-language reasoning
-Fallback LLM	Qwen2.5-1.5B-Instruct	Fail-soft model
-RAG	FAISS	Vector search
-Embeddings	Sentence Transformers	Document embeddings
-Text Splitting	LangChain	Document chunking
-Translation	NLLB-200	Multilingual translation
-ML	Scikit-learn	Prediction and classification
-Visualization	Plotly	Interactive analytics
-Maps	Folium	Port and weather maps
-Weather	Open-Meteo REST API	Live weather
-Authentication	PyJWT	JWT authentication
-Password Security	bcrypt	Password hashing
-Documents	ReportLab / FPDF	PDF generation
-Data	Kaggle / Faker	Data generation and seeding
-Runtime	Google Colab	Development environment
-Tunnel	ngrok / Cloudflare Tunnel	Public application URL
-Version Control	Git / GitHub	Repository management
-
-
-
----
-
-🔑 GOOGLE COLAB SECRETS SETUP
-
-Sensitive credentials must not be hard-coded into notebooks.
-
-Step 1 — Open Colab
-
-Open the required notebook in Google Colab.
-
-Step 2 — Open Secrets
-
-Click the 🔑 Secrets icon in the left sidebar.
-
-Step 3 — Add Secret
-
-Click:
-
-Add new secret
-
-Enter the required:
-
-Secret Name
-Secr
+### 🛡️ Admin Dashboard:
+Provides administrative access for monitoring and managing the platform.
+<img width="1906" height="897" alt="Screenshot 2026-08-18 192324" src="https://github.com/user-attachments/assets/e668dcec-2a6f-45a8-9a9e-b09a9e5d1c8b" />
